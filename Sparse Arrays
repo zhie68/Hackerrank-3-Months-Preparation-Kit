@@ -1,0 +1,4 @@
+var res = new List<int>();
+  for(int i =0; i<queries.Count; i++)
+    {res.Add(strings.Where(j=> j==queries[i]).Count());}
+return res;
