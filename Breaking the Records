@@ -1,0 +1,25 @@
+ public static List<int> breakingRecords(List<int> scores)
+    {
+       int most = scores[0];
+       int lest = scores[0];
+       int min = 0;
+       int max = 0;
+       for (int i=0; i<scores.Count; i++)
+       {
+           if(scores[i] > most)
+           {
+               most = scores[i];
+               max++;
+           }
+           else if(scores[i] < lest)
+           {
+               lest = scores[i];
+               min++;
+           }
+       }
+        List<int> res = new List <int>();
+        res.Add(max);
+        res.Add(min);
+       
+       return res;
+    }
