@@ -1,0 +1,15 @@
+int[] gr = grades.ToArray();
+        List<int> newG = new List<int>(gr.Length);
+        
+        for(int i = 0; i < gr.Length; i++)
+        {
+            int x = grades[i] % 5;
+            if(grades[i] < 38 || x <= 2)
+            {
+                newG.Add(grades[i]);
+                continue;
+            }
+                
+            int j = grades[i] + (5 - remainder);
+            newG.Add(j); 
+        }
