@@ -1,5 +1,5 @@
  public static List<int> breakingRecords(List<int> scores)
-    {
+ {
        int most = scores[0];
        int lest = scores[0];
        int min = 0;
@@ -22,4 +22,4 @@
         res.Add(min);
        
        return res;
-    }
+}
