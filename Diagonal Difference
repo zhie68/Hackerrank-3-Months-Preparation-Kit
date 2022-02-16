@@ -1,0 +1,27 @@
+ public static int diagonalDifference(List<List<int>> arr)
+    {
+         int[][] data = arr.Select(x => x.ToArray()).ToArray();
+        
+        int arrlength = arr.Count;
+        
+        int top = 0;
+        int bot = 0;
+        
+        for(int x = 0; x < arrlength; x++)
+        {
+            for(int y = 0; y < arrlength; y++)
+            {
+                if(x == y)
+                {
+                    top += data[x][y];
+                }
+                
+                if((x+y) == (arrlength - 1))
+                {
+                    bot += data[x][y];
+                }
+            }
+        }
+        
+        return Math.Abs((top - bot));
+    }
