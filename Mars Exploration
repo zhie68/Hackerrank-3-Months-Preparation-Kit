@@ -1,0 +1,29 @@
+public static int marsExploration(string s)
+    {
+        char[] message = s.ToCharArray();
+        
+        int cnt = 0;
+        
+        for(int i = 0; i < message.Length; i++)
+        {              
+            if((i%3) == 1)
+            {
+                if(message[i] != 'O')
+                {
+                   cnt++;
+                }
+    
+                continue;
+            }
+            
+            if(message[i] == 'S')
+            {
+                continue;
+            }
+            
+            cnt++;
+        }
+        
+        
+        return cnt;
+    }
