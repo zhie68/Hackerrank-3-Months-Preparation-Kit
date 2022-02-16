@@ -1,0 +1,21 @@
+ public static int countingValleys(int steps, string path)
+    {
+        char[] pathArr = path.ToCharArray();
+        
+        int seaLevel = 0;
+        int valleyCount = 0;
+        
+        foreach(char step in pathArr)
+        {
+            int currentStep = step.Equals('U') ? 1 : -1;
+            
+            if(seaLevel < 0 && (seaLevel + currentStep) == 0)
+            {
+                valleyCount++;
+            }
+            
+            seaLevel += currentStep;
+        }
+        
+        return valleyCount;
+    }
