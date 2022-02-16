@@ -1,0 +1,11 @@
+public static List<int> countingSort(List<int> arr)
+    {
+        int[] range = new int[100];
+        
+        foreach(int value in arr)
+        {
+            range[value]++;
+        }
+        
+        return range.ToList();
+    }
