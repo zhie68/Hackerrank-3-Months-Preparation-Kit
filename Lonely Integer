@@ -1,0 +1,5 @@
+public static int lonelyinteger(List<int> a)
+    {
+        return a.Select( element => new { element, elementCount = a.Count( i => i == element)})
+                .FirstOrDefault(w => w.elementCount == 1).element;
+    }
