@@ -1,0 +1,4 @@
+public static string pangrams(string s)
+    {
+        return "abcdefghijklmnopqrstuvwxyz".Intersect(s.ToLower()).Count() == 26 ? "pangram" : "not pangram";
+    }
