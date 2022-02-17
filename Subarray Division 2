@@ -1,0 +1,18 @@
+public static int birthday(List<int> s, int d, int m)
+    {
+        int index = 0;
+        int ret = 0;        
+        int listSize = s.Count;
+        int sum = 0;        
+        while ((m + index) <= listSize)
+        {
+                sum = index == 0 ? s.GetRange(0, m).Sum() : 
+                        sum + (s[index + (m - 1)] -  s[index - 1]);
+                index++;
+                if (d == sum)
+                {
+                        ret++;
+                }
+        }
+        return ret;
+    }
